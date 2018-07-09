@@ -1,36 +1,35 @@
 {% set version = "0.2.0" %}
 
 package:
-    name: phreeqpy
-    version: {{ version }}
+  name: phreeqpy
+  version: {{ version }}
 
 source:
-    fn: phreeqpy-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/p/phreeqpy/phreeqpy-{{ version }}.tar.gz
-    md5: 1da153e854fafb6d5fee03d854a059f5
+  url: https://pypi.io/packages/source/p/phreeqpy/phreeqpy-{{ version }}.tar.gz
+  sha256: 81165e3f3cd162770a36e0c94aa3380f5878e1a2f109bb60ec4232513785c3c8
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+    number: 1
+    script: python -m pip install --no-deps --ignore-installed .
 
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
+  build:
+    - python
+    - pip
+  run:
+    - python
 
 test:
-    imports:
-        - phreeqpy
-        - phreeqpy.iphreeqc
+  imports:
+    - phreeqpy
+    - phreeqpy.iphreeqc
 
 about:
-    home: http://www.phreeqpy.com/
-    license: BSD 3-Clause
-    summary: Python tools for PHREEQC
+  home: http://www.phreeqpy.com/
+  license: BSD 3-Clause
+  summary: Python tools for PHREEQC
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
+  recipe-maintainers:
+    - ocefpaf
