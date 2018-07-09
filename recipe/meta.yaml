@@ -10,8 +10,9 @@ source:
     md5: 1da153e854fafb6d5fee03d854a059f5
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+    noarch: python
+    number: 1
+    script: python -m pip install --no-deps --ignore-installed .
 
 
 requirements:
