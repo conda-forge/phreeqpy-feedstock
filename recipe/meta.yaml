@@ -10,8 +10,7 @@ source:
 
 build:
     number: 0
-    script: python -m pip install --no-deps --ignore-installed .
-
+    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -27,7 +26,7 @@ test:
 
 about:
   home: http://www.phreeqpy.com/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   summary: Python tools for PHREEQC
 
 extra:
