@@ -3,7 +3,7 @@ About phreeqpy
 
 Home: http://www.phreeqpy.com/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
