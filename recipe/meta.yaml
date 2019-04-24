@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: phreeqpy
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/phreeqpy/phreeqpy-{{ version }}.tar.gz
-  sha256: 81165e3f3cd162770a36e0c94aa3380f5878e1a2f109bb60ec4232513785c3c8
+  sha256: 8ffbf61ee1ae7c8fb4474dcb7e40f48e24d920375253bb83f47f6d67bc3f70b8
 
 build:
-    number: 1001
+    number: 0
     script: python -m pip install --no-deps --ignore-installed .
 
 
