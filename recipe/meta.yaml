@@ -27,6 +27,7 @@ test:
 about:
   home: http://www.phreeqpy.com/
   license: BSD-3-Clause
+  license_file: LICENSE
   summary: Python tools for PHREEQC
 
 extra:
