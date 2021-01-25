@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: phreeqpy
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/phreeqpy/phreeqpy-{{ version }}.tar.gz
-  sha256: 8ffbf61ee1ae7c8fb4474dcb7e40f48e24d920375253bb83f47f6d67bc3f70b8
+  sha256: 31b21b9eb18af0d1d53b99555e7199cba44fd5159c8e20c0a8711f45cb55ed19
 
 build:
-    number: 2
-    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
