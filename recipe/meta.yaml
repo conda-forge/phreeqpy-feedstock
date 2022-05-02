@@ -5,11 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/phreeqpy/phreeqpy-{{ version }}.tar.gz
-  sha256: 31b21b9eb18af0d1d53b99555e7199cba44fd5159c8e20c0a8711f45cb55ed19
+  - url: https://pypi.io/packages/source/p/phreeqpy/phreeqpy-{{ version }}.tar.gz
+    sha256: 31b21b9eb18af0d1d53b99555e7199cba44fd5159c8e20c0a8711f45cb55ed19
+  - url: https://water.usgs.gov/water-resources/software/PHREEQC/Phreeqc_UserRightsNotice.txt
+    sha256: a54cf33b74d70150a47334e2c9b0bc3f0c42a01c7c5dbbb8f3117cb30a2e111c 
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -18,16 +20,23 @@ requirements:
     - pip
   run:
     - python
+    - pywin32  # [win]
 
 test:
   imports:
     - phreeqpy
     - phreeqpy.iphreeqc
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
-  home: http://www.phreeqpy.com/
+  home: https://www.phreeqpy.com
   license: BSD-3-Clause
-  license_file: LICENSE
+  license_file: 
+    - LICENSE
+    - Phreeqc_UserRightsNotice.txt
   summary: Python tools for PHREEQC
 
 extra:
