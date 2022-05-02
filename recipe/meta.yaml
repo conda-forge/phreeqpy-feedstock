@@ -20,7 +20,8 @@ requirements:
     - pip
   run:
     - python
-    - pywin32  # [win]
+    # TODO: this is needed for the COMM component, but is incompatible with pypy, and should be another output 
+    # - pywin32  # [win]
 
 test:
   imports:
