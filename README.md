@@ -1,7 +1,7 @@
 About phreeqpy
 ==============
 
-Home: http://www.phreeqpy.com/
+Home: https://www.phreeqpy.com
 
 Package license: BSD-3-Clause
 
